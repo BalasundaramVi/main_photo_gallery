@@ -2,7 +2,7 @@
 
 > Nike's Air Jordan online store allows the user to select a certain shoe, view the shoe name, color options, other related shoes, and several other features all on the same page. This module focuses on displaying a collection of images for a single type of shoe.
 
-## Related Projects
+## Related shoes
 
   - https://github.com/WARP-V/shoe_name_and_colors
   - https://github.com/WARP-V/Navigation-Search-Service
@@ -58,3 +58,13 @@ npm run seed
 npm run build
 npm start
 ```
+
+### Endpoints
+
+| Action    | Method | Endpoint                                              | Purpose          |
+|-----------|--------|-------------------------------------------------------|------------------|
+| Create    | POST   | /api/shoes/:shoeID/images                             | Insert new image |
+| Read(All) | GET    | /api/shoes/:shoeID/images                             | Get all images   |
+| Read(One) | GET    | /api/shoes/:shoeID/images/:imageId                    | Get one image    |
+| Update    | PUT    | /api/shoes/:shoeID/images/:imageId                    | Update one image |
+| Delete    | DELETE | /api/shoes/:shoeID/images/:imageId                    | Delete an image  |

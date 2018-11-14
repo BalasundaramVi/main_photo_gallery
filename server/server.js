@@ -2,9 +2,10 @@ const express = require('express');
 
 const parser = require('body-parser');
 const morgan = require('morgan');
-const compression = require('compression')
+const compression = require('compression');
 const path = require('path');
 
+const Controllers = require('./controllers');
 const Shoe = require('../db/Shoe.js');
 
 const app = express();
@@ -27,9 +28,14 @@ app.get('/:shoeID/images', ({ params }, res) => {
   });
 });
 
+app.route('/api/shoes/:shoeID/images')
+  .post(Controllers.Update.create)
+  .get(Controllers.Update.read)
+  .put(Controllers.Update.update)
+  .delete(Controllers.Update.delete);
 
 // APP LISTENING PROTOCOL
-const PORT = 3005;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`>>>>> Express server listening on port ${PORT}...`);
 });
