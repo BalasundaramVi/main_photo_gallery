@@ -2,7 +2,7 @@ const express = require('express');
 
 const parser = require('body-parser');
 const morgan = require('morgan');
-const compression = require('compression')
+const compression = require('compression');
 const path = require('path');
 
 const Shoe = require('../db/Shoe.js');
