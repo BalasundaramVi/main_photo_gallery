@@ -185,4 +185,6 @@ const seed = (callback = () => { mongoose.connection.close(); }) => {
   });
 };
 
+seed();
+
 module.exports = seed;
